@@ -1,0 +1,114 @@
+---
+---
+
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans SC", sans-serif;
+  line-height: 1.7;
+  color: #333;
+  background: #fafafa;
+}
+
+.wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.site-header {
+  padding: 30px 0 20px;
+  border-bottom: 1px solid #e0e0e0;
+  margin-bottom: 30px;
+
+  .site-title {
+    margin: 0;
+    a {
+      color: #222;
+      text-decoration: none;
+      &:hover { color: #0366d6; }
+    }
+  }
+
+  .site-desc {
+    color: #666;
+    margin: 4px 0 0;
+  }
+
+  nav {
+    margin-top: 12px;
+    a {
+      margin-right: 16px;
+      color: #0366d6;
+      text-decoration: none;
+      &:hover { text-decoration: underline; }
+    }
+  }
+}
+
+.content {
+  h1, h2, h3 { color: #222; }
+  h1 { font-size: 1.8em; }
+  h2 { font-size: 1.4em; margin-top: 2em; }
+  h3 { font-size: 1.15em; }
+
+  a { color: #0366d6; }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+  }
+
+  pre, code {
+    background: #f0f0f0;
+    border-radius: 3px;
+  }
+  pre {
+    padding: 16px;
+    overflow-x: auto;
+  }
+  code {
+    padding: 2px 6px;
+    font-size: 0.9em;
+  }
+  pre code {
+    padding: 0;
+    background: none;
+  }
+
+  blockquote {
+    margin: 0;
+    padding: 0 16px;
+    color: #666;
+    border-left: 4px solid #0366d6;
+  }
+
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px 12px;
+      text-align: left;
+    }
+    th { background: #f5f5f5; }
+  }
+
+  /* MathJax formula display */
+  mjx-container {
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+}
+
+.site-footer {
+  margin-top: 60px;
+  padding: 20px 0;
+  border-top: 1px solid #e0e0e0;
+  color: #999;
+  font-size: 0.9em;
+}
