@@ -2,3 +2,9 @@ title: Tech Blog
 description: Daily technical articles — math, code, and engineering
 author: CJJ_SHY
 markdown: kramdown
+exclude:
+  - docs/
+  - tools/
+  - README.md
+  - Gemfile
+  - Gemfile.lock
