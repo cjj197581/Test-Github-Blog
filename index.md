@@ -7,8 +7,13 @@ title: Home
 
 {{ site.description }}
 
-## Posts
+<br>
 
+<ul class="post-list">
 {% for post in site.posts %}
-- **{{ post.date | date: "%Y-%m-%d" }}** — [{{ post.title }}]({{ post.url | relative_url }})
+  <li class="post-card">
+    <div class="post-date">{{ post.date | date: "%Y-%m-%d" }}</div>
+    <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+  </li>
 {% endfor %}
+</ul>
