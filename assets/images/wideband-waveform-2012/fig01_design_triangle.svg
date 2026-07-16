@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">灵敏度—分辨率—盲区设计三角</title>
+  <desc id="desc">基于论文第2、3和6节的联合设计概念图。</desc>
+  <defs>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="8" result="blur"/>
+      <feOffset in="blur" dx="0" dy="5" result="offsetBlur"/>
+      <feFlood flood-color="#123B5D" flood-opacity="0.12" result="shadowColor"/>
+      <feComposite in="shadowColor" in2="offsetBlur" operator="in" result="shadowBlur"/>
+      <feMerge><feMergeNode in="shadowBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#1D78A8"/></marker>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#E8F4FA"/></linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <g font-family="Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" fill="#17324D">
+    
+    <text x="92" y="78" font-size="24" font-weight="700" fill="#1D78A8" letter-spacing="2">DESIGN SPACE · A 类原创图</text>
+    <text x="92" y="132" font-size="44" font-weight="700">宽带波形的联合设计三角</text>
+    <line x1="92" y1="158" x2="1508" y2="158" stroke="#C7DCE7" stroke-width="2"/>
+    
+    <polygon points="800,225 300,735 1300,735" fill="#FFFFFF" stroke="#123B5D" stroke-width="5" filter="url(#shadow)"/>
+    <polygon points="800,250 775,285 825,285" fill="#F39C45"/>
+    <circle cx="800" cy="520" r="105" fill="#E8F4FA" stroke="#1D78A8" stroke-width="4"/>
+    <text x="800" y="505" text-anchor="middle" font-size="31" font-weight="700">联合优化</text>
+    <text x="800" y="545" text-anchor="middle" font-size="20" fill="#60798E">多子脉冲 + NLFM + 最小 ISL</text>
+    <text x="800" y="210" text-anchor="middle" font-size="34" font-weight="700">灵敏度</text>
+    <text x="800" y="246" text-anchor="middle" font-size="19" fill="#60798E">长脉冲积累能量</text>
+    <text x="250" y="790" text-anchor="middle" font-size="34" font-weight="700">距离分辨率</text>
+    <text x="250" y="824" text-anchor="middle" font-size="19" fill="#60798E">大带宽 + 脉压</text>
+    <text x="1350" y="790" text-anchor="middle" font-size="34" font-weight="700">近程盲区</text>
+    <text x="1350" y="824" text-anchor="middle" font-size="19" fill="#60798E">频率分集 + 短脉冲补盲</text>
+    <text x="505" y="430" transform="rotate(-46 505 430)" text-anchor="middle" font-size="21" fill="#1D78A8">脉宽 T 增大 → 灵敏度提升</text>
+    <text x="1095" y="430" transform="rotate(46 1095 430)" text-anchor="middle" font-size="21" fill="#F39C45">T 增大 → Rₑ = cT/2 增大</text>
+    <text x="800" y="710" text-anchor="middle" font-size="21" fill="#39B9C6">脉压分辨率主要由 B 与滤波器决定</text>
+    <rect x="560" y="620" width="480" height="60" rx="30" fill="#123B5D"/>
+    <text x="800" y="658" text-anchor="middle" font-size="23" font-weight="700" fill="#FFFFFF">不用单一脉宽择一：在频率与时间上联合设计</text>
+    
+  </g>
+</svg>

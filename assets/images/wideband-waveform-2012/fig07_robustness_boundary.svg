@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">多普勒、相位误差与强梯度的稳健性边界</title>
+  <desc id="desc">只显示论文明确报告的区间和离散阈值，不伪造连续曲线。</desc>
+  <defs>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="8" result="blur"/>
+      <feOffset in="blur" dx="0" dy="5" result="offsetBlur"/>
+      <feFlood flood-color="#123B5D" flood-opacity="0.12" result="shadowColor"/>
+      <feComposite in="shadowColor" in2="offsetBlur" operator="in" result="shadowBlur"/>
+      <feMerge><feMergeNode in="shadowBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#1D78A8"/></marker>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#E8F4FA"/></linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <g font-family="Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" fill="#17324D">
+    
+    <text x="92" y="78" font-size="24" font-weight="700" fill="#1D78A8" letter-spacing="2">SCHEMATIC BOUNDARY MAP · A/B 混合图</text>
+    <text x="92" y="132" font-size="44" font-weight="700">稳健性边界：只画论文报告的阈值</text>
+    <line x1="92" y1="158" x2="1508" y2="158" stroke="#C7DCE7" stroke-width="2"/>
+    <rect x="85" y="230" width="430" height="470" rx="22" fill="#FFFFFF" stroke="#C7DCE7" stroke-width="2" filter="url(#shadow)"/>
+<rect x="85" y="230" width="10" height="470" rx="5" fill="#1D78A8"/>
+<text x="119" y="278" font-size="27" font-weight="700">① 多普勒偏移</text>
+<text x="119" y="318" font-size="20" fill="#60798E">论文报告的区间</text>
+<text x="119" y="352" font-size="20" fill="#60798E">|v| &lt; 50 m/s</text>
+<text x="119" y="386" font-size="20" fill="#60798E">最小 ISL 滤波器 ISL &lt; −45 dB</text><rect x="585" y="230" width="430" height="470" rx="22" fill="#FFFFFF" stroke="#C7DCE7" stroke-width="2" filter="url(#shadow)"/>
+<rect x="585" y="230" width="10" height="470" rx="5" fill="#F39C45"/>
+<text x="619" y="278" font-size="27" font-weight="700">② 系统相位误差</text>
+<text x="619" y="318" font-size="20" fill="#60798E">论文报告的两个点</text>
+<text x="619" y="352" font-size="20" fill="#60798E">0.25° → ISL 优于 −50 dB</text>
+<text x="619" y="386" font-size="20" fill="#60798E">0.50° → ISL 优于 −40 dB</text><rect x="1085" y="230" width="430" height="470" rx="22" fill="#FFFFFF" stroke="#C7DCE7" stroke-width="2" filter="url(#shadow)"/>
+<rect x="1085" y="230" width="10" height="470" rx="5" fill="#39B9C6"/>
+<text x="1119" y="278" font-size="27" font-weight="700">③ 强反射率梯度</text>
+<text x="1119" y="318" font-size="20" fill="#60798E">离散阶跃实验（Fig. 13）</text>
+<text x="1119" y="352" font-size="20" fill="#60798E">阶跃 ≤ 40 dB：偏差约 ±0.5 dB</text>
+<text x="1119" y="386" font-size="20" fill="#60798E">50 dB：明显偏差</text>
+    <line x1="145" y1="610" x2="455" y2="610" stroke="#C7DCE7" stroke-width="12" stroke-linecap="round"/>
+    <line x1="145" y1="610" x2="370" y2="610" stroke="#1D78A8" stroke-width="12" stroke-linecap="round"/>
+    <circle cx="370" cy="610" r="13" fill="#F39C45"/><text x="370" y="650" text-anchor="middle" font-size="18">50 m/s</text>
+    <circle cx="705" cy="575" r="13" fill="#1D78A8"/><circle cx="895" cy="575" r="13" fill="#F39C45"/>
+    <line x1="705" y1="575" x2="895" y2="575" stroke="#C7DCE7" stroke-width="8"/>
+    <text x="705" y="615" text-anchor="middle" font-size="18">0.25°</text><text x="895" y="615" text-anchor="middle" font-size="18">0.50°</text>
+    <rect x="1150" y="555" width="220" height="44" rx="22" fill="#39B9C6"/><rect x="1370" y="555" width="80" height="44" rx="22" fill="#F39C45"/>
+    <text x="1260" y="585" text-anchor="middle" font-size="18" fill="#FFFFFF" font-weight="700">≤ 40 dB</text><text x="1410" y="585" text-anchor="middle" font-size="18" fill="#FFFFFF" font-weight="700">50</text>
+    <rect x="180" y="755" width="1240" height="76" rx="18" fill="#123B5D"/>
+    <text x="800" y="790" text-anchor="middle" font-size="22" font-weight="700" fill="#FFFFFF">未连成连续性能曲线：所有线段仅表示“已报告区间 / 离散阈值”</text>
+    <text x="800" y="817" text-anchor="middle" font-size="17" fill="#D8F0F7">这是设计边界图，不是原论文 Fig. 6–7 的数据数字化</text>
+    
+  </g>
+</svg>

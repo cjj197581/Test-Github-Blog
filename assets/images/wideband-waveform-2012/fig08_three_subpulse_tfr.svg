@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">40+20+1微秒三子脉冲时频布局</title>
+  <desc id="desc">基于论文表2的三子脉冲参数和文中9.15/3.15千米盲距。</desc>
+  <defs>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="8" result="blur"/>
+      <feOffset in="blur" dx="0" dy="5" result="offsetBlur"/>
+      <feFlood flood-color="#123B5D" flood-opacity="0.12" result="shadowColor"/>
+      <feComposite in="shadowColor" in2="offsetBlur" operator="in" result="shadowBlur"/>
+      <feMerge><feMergeNode in="shadowBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#1D78A8"/></marker>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#E8F4FA"/></linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <g font-family="Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" fill="#17324D">
+    
+    <text x="92" y="78" font-size="24" font-weight="700" fill="#1D78A8" letter-spacing="2">TIME–FREQUENCY MAP · A 类原创图</text>
+    <text x="92" y="132" font-size="44" font-weight="700">三子脉冲的时间—频率布局与补盲</text>
+    <line x1="92" y1="158" x2="1508" y2="158" stroke="#C7DCE7" stroke-width="2"/>
+    
+    <line x1="260" y1="720" x2="1320" y2="720" stroke="#17324D" stroke-width="3" marker-end="url(#arrow)"/>
+    <line x1="260" y1="720" x2="260" y2="220" stroke="#17324D" stroke-width="3" marker-end="url(#arrow)"/>
+    <text x="1340" y="728" font-size="21">时间 (μs)</text><text x="170" y="215" font-size="21">频率通道</text>
+    <rect x="260" y="275" width="640" height="110" rx="16" fill="#123B5D"/>
+    <text x="580" y="325" text-anchor="middle" font-size="26" font-weight="700" fill="#FFFFFF">f₁ · T₁ = 40 μs</text>
+    <text x="580" y="359" text-anchor="middle" font-size="18" fill="#D8F0F7">B = 3.6 MHz · 最高灵敏度</text>
+    <rect x="900" y="445" width="320" height="110" rx="16" fill="#1D78A8"/>
+    <text x="1060" y="495" text-anchor="middle" font-size="24" font-weight="700" fill="#FFFFFF">f₂ · 20 μs</text>
+    <text x="1060" y="529" text-anchor="middle" font-size="18" fill="#D8F0F7">B = 3.6 MHz</text>
+    <rect x="1220" y="615" width="16" height="80" rx="8" fill="#F39C45"/>
+    <path d="M 1228.0 615 L 1228.0 570 L 1260 570" fill="none" stroke="#F39C45" stroke-width="3"/>
+    <text x="1270" y="578" font-size="22" font-weight="700" fill="#F39C45">f₃ · T₃ = 1 μs</text>
+    <line x1="260" y1="712" x2="260" y2="730" stroke="#17324D" stroke-width="2"/><text x="260" y="760" text-anchor="middle" font-size="18">0</text><line x1="900" y1="712" x2="900" y2="730" stroke="#17324D" stroke-width="2"/><text x="900" y="760" text-anchor="middle" font-size="18">40</text><line x1="1220" y1="712" x2="1220" y2="730" stroke="#17324D" stroke-width="2"/><line x1="1236" y1="712" x2="1236" y2="730" stroke="#17324D" stroke-width="2"/>
+    <text x="1228.0" y="760" text-anchor="middle" font-size="18" data-terminal-tick="60–61 μs">60–61</text>
+    <path d="M 260 820 L 1236 820" stroke="#123B5D" stroke-width="6" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+    <text x="748.0" y="854" text-anchor="middle" font-size="20" fill="#123B5D" font-weight="700">f₁ 累计盲时间 61 μs → 9.15 km</text>
+    <rect x="1035" y="195" width="470" height="215" rx="22" fill="#FFFFFF" stroke="#C7DCE7" stroke-width="2" filter="url(#shadow)"/>
+    <text x="1070" y="240" font-size="24" font-weight="700">累计盲距</text>
+    <text x="1070" y="282" font-size="20" fill="#123B5D">f₁：(40+20+1) μs → 9.15 km</text>
+    <text x="1070" y="322" font-size="20" fill="#1D78A8">f₂：(20+1) μs → 3.15 km</text>
+    <text x="1070" y="362" font-size="20" fill="#F39C45">f₃：后置短脉冲 → 无盲距</text>
+    <text x="1070" y="393" font-size="17" fill="#60798E">Rₑ = c·Tₑ/2</text>
+    
+  </g>
+</svg>
