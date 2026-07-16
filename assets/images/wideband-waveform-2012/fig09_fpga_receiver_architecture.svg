@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">FPGA频率分集接收机架构</title>
+  <desc id="desc">工程级架构图，展示发射、通道化、脉压、对齐、标定、合成与质量控制。</desc>
+  <defs>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="8" result="blur"/>
+      <feOffset in="blur" dx="0" dy="5" result="offsetBlur"/>
+      <feFlood flood-color="#123B5D" flood-opacity="0.12" result="shadowColor"/>
+      <feComposite in="shadowColor" in2="offsetBlur" operator="in" result="shadowBlur"/>
+      <feMerge><feMergeNode in="shadowBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#1D78A8"/></marker>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#E8F4FA"/></linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <g font-family="Microsoft YaHei, PingFang SC, Noto Sans CJK SC, sans-serif" fill="#17324D">
+    
+    <text x="92" y="78" font-size="24" font-weight="700" fill="#1D78A8" letter-spacing="2">IMPLEMENTATION ARCHITECTURE · A / L4</text>
+    <text x="92" y="132" font-size="44" font-weight="700">从发射到 QC：宽带频率分集接收链</text>
+    <line x1="92" y1="158" x2="1508" y2="158" stroke="#C7DCE7" stroke-width="2"/>
+    <rect x="70" y="280" width="205" height="210" rx="22" fill="#FFFFFF" stroke="#C7DCE7" stroke-width="2" filter="url(#shadow)"/>
+<rect x="70" y="280" width="10" height="210" rx="5" fill="#123B5D"/>
+<text x="104" y="328" font-size="27" font-weight="700">① 发射</text>
+<text x="104" y="368" font-size="20" fill="#60798E">FPGA / DDS</text>
+<text x="104" y="402" font-size="20" fill="#60798E">f₁·f₂·f₃</text><path d="M 275 385 L 305 385" fill="none" stroke="#1D78A8" stroke-width="4" marker-end="url(#arrow)"/><rect x="315" y="280" width="205" height="210" rx="22" fill="#FFFFFF" stroke="#C7DCE7" stroke-width="2" filter="url(#shadow)"/>
+<rect x="315" y="280" width="10" height="210" rx="5" fill="#1D78A8"/>
+<text x="349" y="328" font-size="27" font-weight="700">② 通道化</text>
+<text x="349" y="368" font-size="20" fill="#60798E">DDC + 滤波</text>
+<text x="349" y="402" font-size="20" fill="#60798E">3 路复数 IQ</text><path d="M 520 385 L 550 385" fill="none" stroke="#1D78A8" stroke-width="4" marker-end="url(#arrow)"/><rect x="560" y="280" width="205" height="210" rx="22" fill="#FFFFFF" stroke="#C7DCE7" stroke-width="2" filter="url(#shadow)"/>
+<rect x="560" y="280" width="10" height="210" rx="5" fill="#39B9C6"/>
+<text x="594" y="328" font-size="27" font-weight="700">③ 脉压</text>
+<text x="594" y="368" font-size="20" fill="#60798E">每通道独立</text>
+<text x="594" y="402" font-size="20" fill="#60798E">最小 ISL FIR</text><path d="M 765 385 L 795 385" fill="none" stroke="#1D78A8" stroke-width="4" marker-end="url(#arrow)"/><rect x="805" y="280" width="205" height="210" rx="22" fill="#FFFFFF" stroke="#C7DCE7" stroke-width="2" filter="url(#shadow)"/>
+<rect x="805" y="280" width="10" height="210" rx="5" fill="#1D78A8"/>
+<text x="839" y="328" font-size="27" font-weight="700">④ 对齐</text>
+<text x="839" y="368" font-size="20" fill="#60798E">群时延补偿</text>
+<text x="839" y="402" font-size="20" fill="#60798E">距离库对齐</text><path d="M 1010 385 L 1040 385" fill="none" stroke="#1D78A8" stroke-width="4" marker-end="url(#arrow)"/><rect x="1050" y="280" width="205" height="210" rx="22" fill="#FFFFFF" stroke="#C7DCE7" stroke-width="2" filter="url(#shadow)"/>
+<rect x="1050" y="280" width="10" height="210" rx="5" fill="#F39C45"/>
+<text x="1084" y="328" font-size="27" font-weight="700">⑤ 标定</text>
+<text x="1084" y="368" font-size="20" fill="#60798E">增益 / 相位</text>
+<text x="1084" y="402" font-size="20" fill="#60798E">通道间一致性</text><path d="M 1255 385 L 1285 385" fill="none" stroke="#1D78A8" stroke-width="4" marker-end="url(#arrow)"/><rect x="1295" y="280" width="205" height="210" rx="22" fill="#FFFFFF" stroke="#C7DCE7" stroke-width="2" filter="url(#shadow)"/>
+<rect x="1295" y="280" width="10" height="210" rx="5" fill="#123B5D"/>
+<text x="1329" y="328" font-size="27" font-weight="700">⑥ 合成</text>
+<text x="1329" y="368" font-size="20" fill="#60798E">Zmin(r) 选择</text>
+<text x="1329" y="402" font-size="20" fill="#60798E">无盲区输出</text>
+    <rect x="315" y="585" width="1185" height="135" rx="24" fill="#E8F4FA" stroke="#1D78A8" stroke-width="3"/>
+    <text x="355" y="633" font-size="25" font-weight="700">⑦ 质量控制（QC）回路</text>
+    <text x="355" y="677" font-size="20" fill="#60798E">监测饱和、噪声底、通道失配、相位抖动、盲区交接连续性与旁瓣污染</text>
+    <path d="M 1380 720 C 1380 820, 170 820, 170 505" fill="none" stroke="#F39C45" stroke-width="4" stroke-dasharray="11 8" marker-end="url(#arrow)"/>
+    <text x="800" y="800" text-anchor="middle" font-size="20" fill="#F39C45" font-weight="700">QC 越界 → 触发重标定 / 通道隔离 / 降级运行</text>
+    <rect x="70" y="585" width="205" height="135" rx="24" fill="#123B5D"/>
+    <text x="172" y="628" text-anchor="middle" font-size="22" font-weight="700" fill="#FFFFFF">共享时基</text>
+    <text x="172" y="666" text-anchor="middle" font-size="18" fill="#D8F0F7">PRF / 时戳</text>
+    <text x="172" y="696" text-anchor="middle" font-size="18" fill="#D8F0F7">触发 / 标定表</text>
+    
+  </g>
+</svg>
